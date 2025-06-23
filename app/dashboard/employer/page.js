@@ -333,7 +333,8 @@ export default function EmployerDashboard() {
             <Alert className="mb-6 border-orange-200 bg-orange-50">
               <Crown className="h-4 w-4 text-orange-600" />
               <AlertDescription className="text-orange-800">
-                You've reached your job posting limit ({planLimits.jobs} jobs).
+                You&#39;ve reached your job posting limit ({planLimits.jobs}{" "}
+                jobs).
                 <Link href="/pricing" className="font-medium underline ml-1">
                   Upgrade your plan
                 </Link>{" "}

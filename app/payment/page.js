@@ -49,7 +49,6 @@ export default function Payment() {
     const plan = searchParams.get("plan");
     // Check if plan exists in planDetails to avoid issues
     if (plan && planDetails[plan]) {
-      // Removed type assertion 'as keyof typeof planDetails'
       setPlanId(plan);
     } else {
       router.push("/pricing");
