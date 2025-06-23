@@ -16,6 +16,7 @@ import {
   Clock,
   Star,
 } from "lucide-react";
+import Image from "next/image";
 
 const featuredJobs = [
   {
@@ -184,7 +185,9 @@ export default function Home() {
                 <CardContent className="p-6">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-3">
-                      <img
+                      <Image
+                        width={40}
+                        height={40}
                         src={job.logo}
                         alt={job.company}
                         className="w-12 h-12 rounded-lg object-cover"
@@ -253,7 +256,9 @@ export default function Home() {
                 className="text-center group cursor-pointer"
               >
                 <div className="bg-gray-100 rounded-xl p-6 mb-4 group-hover:bg-gray-200 transition-colors">
-                  <img
+                  <Image
+                    width={40}
+                    height={40}
                     src={company.logo}
                     alt={company.name}
                     className="w-20 h-20 mx-auto rounded-lg object-cover"

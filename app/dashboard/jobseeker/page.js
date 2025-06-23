@@ -32,6 +32,7 @@ import {
   CreditCard,
 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const mockJobs = [
   {
@@ -333,7 +334,8 @@ export default function EmployerDashboard() {
             <Alert className="mb-6 border-orange-200 bg-orange-50">
               <Crown className="h-4 w-4 text-orange-600" />
               <AlertDescription className="text-orange-800">
-                You've reached your job posting limit ({planLimits.jobs} jobs).
+                You&apos;ve reached your job posting limit ({planLimits.jobs}{" "}
+                jobs).
                 <Link href="/pricing" className="font-medium underline ml-1">
                   Upgrade your plan
                 </Link>{" "}
@@ -497,7 +499,9 @@ export default function EmployerDashboard() {
                         className="flex items-center justify-between p-4 border rounded-lg"
                       >
                         <div className="flex items-center space-x-4">
-                          <img
+                          <Image
+                            width={48}
+                            height={48}
                             src={applicant.avatar}
                             alt={applicant.name}
                             className="w-12 h-12 rounded-full object-cover"

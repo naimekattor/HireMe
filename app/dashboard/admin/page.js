@@ -20,6 +20,7 @@ import {
   Eye,
   Shield,
 } from "lucide-react";
+import Image from "next/image";
 
 const mockUsers = [
   {
@@ -286,7 +287,9 @@ export default function AdminDashboard() {
                         className="flex items-center justify-between p-4 border rounded-lg"
                       >
                         <div className="flex items-center space-x-4">
-                          <img
+                          <Image
+                            width={48}
+                            height={48}
                             src={userData.avatar}
                             alt={userData.name}
                             className="w-12 h-12 rounded-full object-cover"
