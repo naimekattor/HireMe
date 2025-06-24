@@ -74,6 +74,17 @@ const companies = [
   },
 ];
 
+const handleSearch = (e) => {
+  e.preventDefault();
+  const form = new FormData(e.target);
+  const title = form.get("title") || "";
+  const city = form.get("city") || "";
+  const filteredData = featuredJobs.filter((job) => {
+    return job.title.toLowerCase().includes(title.toLowerCase());
+  });
+  //console.log(filteredData);
+};
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
@@ -90,11 +101,15 @@ export default function Home() {
             </p>
 
             {/* Search Bar */}
-            <div className="bg-white rounded-full shadow-lg p-2 max-w-4xl mx-auto mb-8 flex flex-col md:flex-row gap-2">
+            <form
+              onSubmit={handleSearch}
+              className="bg-white rounded-full shadow-lg p-2 max-w-4xl mx-auto mb-8 flex flex-col md:flex-row gap-2"
+            >
               <div className="flex-1 flex items-center px-4 py-2">
                 <Search className="h-5 w-5 text-gray-400 mr-3" />
                 <input
                   type="text"
+                  name="title"
                   placeholder="Job title, keywords, or company"
                   className="flex-1 outline-none text-gray-700"
                 />
@@ -103,14 +118,18 @@ export default function Home() {
                 <MapPin className="h-5 w-5 text-gray-400 mr-3" />
                 <input
                   type="text"
+                  name="city"
                   placeholder="City or remote"
                   className="flex-1 outline-none text-gray-700"
                 />
               </div>
-              <Button className="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-full">
+              <Button
+                type="submit"
+                className="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-full"
+              >
                 Search Jobs
               </Button>
-            </div>
+            </form>
 
             <div className="flex justify-center gap-4">
               <Link href="/login">

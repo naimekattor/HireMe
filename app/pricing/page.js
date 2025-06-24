@@ -121,7 +121,7 @@ const plans = [
 ];
 
 export default function Pricing() {
-  const [userType, setUserType] = useState("jobseeker"); // Removed type annotation
+  const [userType, setUserType] = useState("jobseeker");
 
   const filteredPlans = plans.filter((plan) => plan.userType === userType);
 

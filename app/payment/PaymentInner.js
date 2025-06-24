@@ -30,8 +30,8 @@ export default function Payment() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const { user } = useAuth();
-  const [planId, setPlanId] = useState(""); // Removed string type annotation
-  const [paymentStep, setPaymentStep] = useState("details"); // Removed union type annotation
+  const [planId, setPlanId] = useState("");
+  const [paymentStep, setPaymentStep] = useState("details");
   const [formData, setFormData] = useState({
     cardNumber: "",
     expiryDate: "",
@@ -47,7 +47,7 @@ export default function Payment() {
 
   useEffect(() => {
     const plan = searchParams.get("plan");
-    // Check if plan exists in planDetails to avoid issues
+
     if (plan && planDetails[plan]) {
       setPlanId(plan);
     } else {
@@ -55,8 +55,7 @@ export default function Payment() {
     }
   }, [searchParams, router]);
 
-  // Safely access selectedPlan using the dynamic planId
-  const selectedPlan = planDetails[planId] || planDetails.basic; // Fallback to basic if planId is invalid or not yet set
+  const selectedPlan = planDetails[planId] || planDetails.basic;
 
   const validateForm = () => {
     const newErrors = {};
@@ -82,7 +81,6 @@ export default function Payment() {
   };
 
   const handleInputChange = (field, value) => {
-    // Removed string type annotations
     setFormData((prev) => ({ ...prev, [field]: value }));
     if (errors[field]) {
       setErrors((prev) => ({ ...prev, [field]: "" }));
@@ -90,7 +88,6 @@ export default function Payment() {
   };
 
   const formatCardNumber = (value) => {
-    // Removed string type annotation
     const v = value.replace(/\s+/g, "").replace(/[^0-9]/gi, "");
     const matches = v.match(/\d{4,16}/g);
     const match = (matches && matches[0]) || "";
@@ -106,7 +103,6 @@ export default function Payment() {
   };
 
   const formatExpiryDate = (value) => {
-    // Removed string type annotation
     const v = value.replace(/\s+/g, "").replace(/[^0-9]/gi, "");
     if (v.length >= 2) {
       return v.substring(0, 2) + "/" + v.substring(2, 4);
@@ -115,20 +111,16 @@ export default function Payment() {
   };
 
   const handleSubmit = async (e) => {
-    // Removed React.FormEvent type annotation
     e.preventDefault();
 
     if (!validateForm()) return;
 
     setPaymentStep("processing");
 
-    // Simulate payment processing
     try {
       await new Promise((resolve) => setTimeout(resolve, 3000));
 
-      // Simulate random success/failure for demo
       if (Math.random() > 0.1) {
-        // 90% success rate
         setPaymentStep("success");
         setTimeout(() => {
           router.push(`/dashboard/${user?.role}`);

@@ -23,7 +23,6 @@ export function AuthProvider({ children }) {
     // Simulate API call delay
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
-    // Mock authentication - in real app, this would be an API call
     if (email && password) {
       const mockUser = {
         id: `${role}-${Date.now()}`,
