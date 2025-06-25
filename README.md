@@ -50,6 +50,8 @@
 "react": "^19.0.0",
 "react-dom": "^19.0.0",
 "tailwind-merge": "^3.3.1"
+```
+
 🖥️ Getting Started / Local Setup
 ## 1.Clone the repository
 ``
