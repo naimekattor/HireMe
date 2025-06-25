@@ -1,36 +1,114 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 💼 HireMe
 
-## Getting Started
+![HireMe Screenshot](./hiremehome.jpeg)
 
-First, run the development server:
+## 📝 Overview
 
-```bash
+**HireMe** is a modern job platform frontend application built with React and Tailwind CSS. It includes role-based access control, file upload support, and a basic payment feature. The platform enables seamless interaction between job seekers and employers by providing secure and efficient tools to connect and transact.
+
+---
+
+## 🚀 Live Demo
+
+🔗 [Visit HireMe Live](https://serene-sprite-ffe697.netlify.app/)
+
+---
+
+## ⚙️ Technologies Used
+
+- React
+- Tailwind CSS
+- shadcn/ui
+- Radix UI components
+
+---
+
+## 🌟 Key Features
+
+- 🔐 Role-based access control for users and employers
+- 📂 Resume and document file upload functionality
+- 💳 Integrated basic payment system
+- 📢 Job posting and listing capabilities
+- 📊 Clean, professional UI with responsive design
+
+---
+
+## 📦 Dependencies
+
+```json
+"@radix-ui/react-avatar": "^1.1.10",
+"@radix-ui/react-dialog": "^1.1.14",
+"@radix-ui/react-dropdown-menu": "^2.1.15",
+"@radix-ui/react-label": "^2.1.7",
+"@radix-ui/react-select": "^2.2.5",
+"@radix-ui/react-slot": "^1.2.3",
+"@radix-ui/react-tabs": "^1.1.12",
+"class-variance-authority": "^0.7.1",
+"clsx": "^2.1.1",
+"lucide-react": "^0.522.0",
+"next": "15.3.4",
+"react": "^19.0.0",
+"react-dom": "^19.0.0",
+"tailwind-merge": "^3.3.1"
+🖥️ Getting Started / Local Setup
+## 1.Clone the repository
+``
+git clone https://github.com/naimekattor/HireMe.git
+cd hireme
+``
+## 2.Install dependencies
+``
+npm install
+
+``
+## 3.Run the development server
+``
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+``
+## 📌 Update Instructions
+Pull latest changes from the main branch:
+``
+git pull origin main
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+``
+## Reinstall new dependencies if added:
+``
+npm install
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+``
+🤝 Contribution Guide
+Fork the repo
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Create a feature branch: git checkout -b feature-name
 
-## Learn More
+Commit your changes: git commit -m "Added feature"
 
-To learn more about Next.js, take a look at the following resources:
+Push to your fork: git push origin feature-name
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Open a Pull Request
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+🛑 Known Issues / Limitations
+Payment system is in test mode only
 
-## Deploy on Vercel
+Admin panel not yet implemented
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+📄 License
+This project is licensed under the MIT License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🙌 Acknowledgements
+Radix UI
+
+Shadcn/ui
+
+Lucide Icons
+
+Special thanks to mentors and open-source contributors!
+
+📬 Contact
+Feel free to reach out if you have any feedback, ideas, or want to collaborate!
+
+Naim Hossen
+📧 Email: naimhossendev@gmail.com
+🌐 Portfolio: https://naim-portfolio-delta.vercel.app
+💼 LinkedIn: linkedin.com/in/naimhossen
+
