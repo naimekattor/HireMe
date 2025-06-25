@@ -110,7 +110,7 @@ Special thanks to mentors and open-source contributors!
 Feel free to reach out if you have any feedback, ideas, or want to collaborate!
 
 Naim Hossen
-📧 Email: naimhossendev@gmail.com
+📧 Email: naimekattor@gmail.com
 🌐 Portfolio: https://naim-portfolio-delta.vercel.app
-💼 LinkedIn: linkedin.com/in/naimhossen
+💼 LinkedIn: linkedin.com/in/naimekattor
 
