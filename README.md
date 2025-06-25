@@ -54,31 +54,31 @@
 
 🖥️ Getting Started / Local Setup
 ## 1.Clone the repository
-``
+```json
 git clone https://github.com/naimekattor/HireMe.git
 cd hireme
-``
+```
 ## 2.Install dependencies
-``
+```json
 npm install
 
-``
+```
 ## 3.Run the development server
-``
+```json
 npm run dev
-``
+```
 ## 📌 Update Instructions
 Pull latest changes from the main branch:
-``
+```json
 git pull origin main
 
-``
+```
 ## Reinstall new dependencies if added:
-``
+```json
 npm install
 
-``
-🤝 Contribution Guide
+```
+`## 🤝 Contribution Guide
 Fork the repo
 
 Create a feature branch: git checkout -b feature-name
@@ -89,15 +89,15 @@ Push to your fork: git push origin feature-name
 
 Open a Pull Request
 
-🛑 Known Issues / Limitations
+## 🛑 Known Issues / Limitations
 Payment system is in test mode only
 
 Admin panel not yet implemented
 
-📄 License
+## 📄 License
 This project is licensed under the MIT License
 
-🙌 Acknowledgements
+## 🙌 Acknowledgements
 Radix UI
 
 Shadcn/ui
@@ -106,7 +106,7 @@ Lucide Icons
 
 Special thanks to mentors and open-source contributors!
 
-📬 Contact
+## 📬 Contact
 Feel free to reach out if you have any feedback, ideas, or want to collaborate!
 
 Naim Hossen
